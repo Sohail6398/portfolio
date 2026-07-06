@@ -1,0 +1,59 @@
+<section id="experience" class="experience-section">
+
+    <!-- Glowing Section Header -->
+    <div class="exp-header-container">
+        <span class="exp-badge"><i class="fas fa-history"></i> Journey</span>
+        <h2>Professional Experience</h2>
+    </div>
+
+    <div class="timeline">
+
+        @for(item of experiences; track item.company){
+
+            <div class="timeline-item">
+
+                <!-- Active Pulsing Neon Node Point -->
+                <div class="timeline-dot-wrapper">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-dot-pulse"></div>
+                </div>
+
+                <!-- Modern Glowing Panel Card -->
+                <div class="timeline-card">
+
+                    <div class="card-top-row">
+                        <span class="duration">
+                            <i class="far fa-calendar-alt"></i> {{item.duration}}
+                        </span>
+                        <p class="location">
+                            <i class="fas fa-map-marker-alt"></i> {{item.location}}
+                        </p>
+                    </div>
+
+                    <h3 class="role-title">{{item.role}}</h3>
+                    <h4 class="company-title">{{item.company}}</h4>
+
+                    <p class="description-text">
+                        {{item.description}}
+                    </p>
+
+                    <!-- Tech Badges Loop Container -->
+                    <div class="tech">
+
+                        @for(tech of item.technologies; track tech){
+
+                            <span class="tech-pill">{{tech}}</span>
+
+                        }
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        }
+
+    </div>
+
+</section>

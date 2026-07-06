@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Task Management System",
+    "description": "Task management application built using ASP.NET Core, Angular and SQL Server.",
+    "image": "assets/images/projects/task-management.png",
+    "category": ".NET",
+    "technologies": [
+      "Angular",
+      "ASP.NET Core",
+      "SQL Server"
+    ],
+    "github": "",
+    "demo": ""
+  },
+  {
+    "title": "Social Media Platform",
+    "description": "Microservice based social media application.",
+    "image": "assets/images/projects/social-media.png",
+    "category": "Angular",
+    "technologies": [
+      "Angular",
+      ".NET",
+      "RabbitMQ"
+    ],
+    "github": "https://github.com/Sohail6398/SocialApplication",
+    "demo": ""
+  },
+  {
+    "title": "Parking Management",
+    "description": "Parking management system using Clean Architecture.",
+    "image": "assets/images/PMS-2.png",
+    "category": ".NET",
+    "technologies": [
+      "Angular",
+      "ASP.NET Core",
+      "SQL"
+    ],
+    "github": "https://github.com/Sohail6398/ParkingManagementSystem",
+    "demo": ""
+  },
+  {
+    "title": "Custom Clothing",
+    "description": "AI-based custom clothing measurement application.",
+    "image": "assets/images/projects/clothing.png",
+    "category": "AI",
+    "technologies": [
+      "ML.NET",
+      "Angular",
+      "ASP.NET Core"
+    ],
+    "github": "https://github.com/Sohail6398/OKTailorsEcommerce",
+    "demo": ""
+  }
+]

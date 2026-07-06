@@ -1,0 +1,70 @@
+{
+  "frontend": [
+    {
+      "name": "Angular",
+      "percentage": 90,
+      "icon": "fa-brands fa-angular"
+    },
+    {
+      "name": "HTML",
+      "percentage": 95,
+      "icon": "fa-brands fa-html5"
+    },
+    {
+      "name": "CSS",
+      "percentage": 90,
+      "icon": "fa-brands fa-css3-alt"
+    },
+    {
+      "name": "TypeScript",
+      "percentage": 90,
+      "icon": "fa-solid fa-code"
+    }
+  ],
+  "backend": [
+    {
+      "name": "ASP.NET Core",
+      "percentage": 95,
+      "icon": "fa-solid fa-server"
+    },
+    {
+      "name": "Web API",
+      "percentage": 95,
+      "icon": "fa-solid fa-cloud"
+    },
+    {
+      "name": "Entity Framework",
+      "percentage": 90,
+      "icon": "fa-solid fa-database"
+    }
+  ],
+  "database": [
+    {
+      "name": "SQL Server",
+      "percentage": 95,
+      "icon": "fa-solid fa-database"
+    },
+    {
+      "name": "MySQL",
+      "percentage": 80,
+      "icon": "fa-solid fa-table"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Git",
+      "percentage": 90,
+      "icon": "fa-brands fa-git-alt"
+    },
+    {
+      "name": "Docker",
+      "percentage": 70,
+      "icon": "fa-brands fa-docker"
+    },
+    {
+      "name": "RabbitMQ",
+      "percentage": 70,
+      "icon": "fa-solid fa-network-wired"
+    }
+  ]
+}

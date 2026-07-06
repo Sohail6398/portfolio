@@ -1,0 +1,145 @@
+/* Base Layout Component Flex to Grid Conversion */
+.hero-section-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #111827 !important;
+  padding: 120px 40px 40px 40px !important;
+  box-sizing: border-box !important;
+}
+
+/* Master Grid Structure splitting space 50/50 on larger viewports */
+.hero-grid-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-content-wrapper {
+  z-index: 10;
+  width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+}
+
+/* Right Side Column Visual Placement Wrapper */
+.hero-visual-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Code Display Terminal Card Panel Styles */
+.code-terminal-card {
+  width: 100%;
+  max-width: 500px;
+  background: #1e293b;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(56, 189, 248, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.code-terminal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Terminal Title Bar Controls Configuration */
+.terminal-header {
+  background: #0f172a;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green { background: #22c55e; }
+
+.terminal-title {
+  color: #64748b;
+  font-size: 13px;
+  font-family: monospace;
+}
+
+/* Code Snippet Formatting Content Window Area */
+.terminal-body {
+  padding: 24px;
+  margin: 0;
+  text-align: left;
+}
+
+.terminal-body pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.terminal-body code {
+  font-family: 'Fira Code', Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* C# IDE Style Code Token Theme Colors */
+.code-keyword { color: #f43f5e; }  /* Pink-red keywords */
+.code-class { color: #38bdf8; }    /* Cyan classes */
+.code-string { color: #34d399; }   /* Green text literals */
+
+/* Native Responsive Rules: Stack items vertically on Mobile and Tablets */
+@media screen and (max-width: 992px) {
+  .hero-grid-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-content-wrapper {
+    align-items: center !important;
+  }
+  
+  .hero-description-text {
+    margin: 8px auto;
+  }
+}
+
+/* Prior typography definitions preserved for styling layout flow */
+.hero-welcome-badge { font-size: 16px; font-weight: 500; color: #9ca3af; display: flex; align-items: center; gap: 8px; }
+.hero-main-title { font-size: clamp(32px, 5vw, 64px); font-weight: 800; color: #ffffff; margin: 0; letter-spacing: -0.02em; }
+.hero-highlight-name { color: #38bdf8; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4)); }
+.hero-subtitle-box { display: inline-flex; align-items: center; min-height: 45px; }
+.hero-description-text { font-size: 18px; color: #9ca3af; max-width: 576px; line-height: 1.6; margin: 8px 0; }
+.hero-download-btn { margin-top: 16px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; font-weight: 600; font-size: 16px; color: #ffffff; background: transparent; border: 2px solid #38bdf8; border-radius: 8px; cursor: pointer; transition: all 0.3s ease-in-out; }
+.hero-download-btn:hover { background-color: #38bdf8; color: #111827; box-shadow: 0 0 20px rgba(56, 189, 248, 0.6); }
+.hero-download-btn:active { transform: scale(0.95); }
+@keyframes typing { 0%, 100% { width: 0%; } 30%, 70% { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
+@keyframes custom-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+.animate-custom-typing { font-size: clamp(20px, 3vw, 36px); font-weight: 700; color: #e5e7eb; display: inline-block; overflow: hidden; white-space: nowrap; border-right: 4px solid #38bdf8; padding-right: 6px; animation: typing 4s steps(22) infinite, blink 0.75s step-end infinite; }
+.home-svg-icon { width: 20px !important; height: 20px !important; display: inline-block; }
+.animate-pulse-icon { animation: custom-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }

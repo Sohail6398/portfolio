@@ -1,0 +1,17 @@
+[
+  {
+    "company": "Chetu India Pvt. Ltd.",
+    "role": ".NET Software Engineer",
+    "duration": "2025 - Present",
+    "location": "Noida, India",
+    "description": "Developing enterprise web applications using ASP.NET Core, Angular, SQL Server, Clean Architecture and RabbitMQ.",
+    "technologies": [
+      "ASP.NET Core",
+      "Angular",
+      "SQL Server",
+      "Entity Framework Core",
+      "RabbitMQ",
+      "Docker"
+    ]
+  }
+]

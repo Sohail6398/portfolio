@@ -1,0 +1,53 @@
+<section id="skills" class="skills-section">
+
+    <!-- Glowing Section Name Header -->
+    <div class="skills-header-container">
+        <span class="skills-badge"><i class="fas fa-bolt"></i> Expertise</span>
+        <h2>My Skills</h2>
+        <p class="subtitle">Technologies I work with</p>
+    </div>
+
+    @for(category of skillCategories; track category){
+
+        <h3 class="category-heading">
+            <span class="category-line"></span>
+            {{category | titlecase}}
+        </h3>
+
+        <div class="grid">
+
+            @for(skill of skills[category]; track skill.name){
+
+                <div class="card">
+
+                    <div class="header">
+
+                        <div class="skill-title-box">
+                            <i [class]="skill.icon" class="skill-icon-glyph"></i>
+                            <span class="skill-name">{{skill.name}}</span>
+                        </div>
+
+                        <span class="percentage-label">{{skill.percentage}}%</span>
+
+                    </div>
+
+                    <!-- Enhanced Progress Track Frame -->
+                    <div class="progress">
+
+                        <div
+                            class="progress-fill"
+                            [style.width.%]="skill.percentage">
+                            <span class="progress-glow-tip"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+
+    }
+
+</section>

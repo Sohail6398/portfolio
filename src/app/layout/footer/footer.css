@@ -1,0 +1,176 @@
+/* Core Structural Component Setup Area */
+.footer-container {
+    background: #0f172a;
+    padding: 40px 8% 30px 8%;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+
+     /* Bright neon green laser border matching the education card theme */
+    border-top: 2px solid #34d399;
+    
+    /* Layered emerald/mint green shadows to create an intense electrical glow effect */
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.4), 
+                0 0 12px rgba(52, 211, 153, 0.6), 
+                0 0 24px rgba(52, 211, 153, 0.3);
+}
+
+.footer-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP ROW: Brand and Layout Details block alignment */
+.footer-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-logo {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #38bdf8;
+    letter-spacing: -0.01em;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.2));
+}
+
+.footer-tagline {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 8px 0 0 0;
+}
+
+/* Dynamic Interactive Icons Stack */
+.footer-socials {
+    display: flex;
+    gap: 14px;
+}
+
+.social-icon-pill {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #1e293b;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.social-icon-pill:hover {
+    transform: translateY(-4px);
+}
+
+/* Individual Color Token Accent States on Hover triggers */
+.social-icon-pill.hover-cyan:hover {
+    color: #38bdf8;
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+}
+
+.social-icon-pill.hover-blue:hover {
+    color: #60a5fa;
+    border-color: #60a5fa;
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.25);
+}
+
+.social-icon-pill.hover-green:hover {
+    color: #34d399;
+    border-color: #34d399;
+    box-shadow: 0 0 15px rgba(52, 211, 153, 0.25);
+}
+
+/* Structural Divider line layout styling rules */
+.footer-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05) 20%, rgba(255, 255, 255, 0.05) 80%, transparent);
+    margin: 30px 0;
+    width: 100%;
+}
+
+/* BOTTOM ROW: Metadata, Copyright & Navigation */
+.footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright-text {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.text-highlight {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+/* Interactive Scroll Up Indicator Button Component Blueprint */
+.scroll-top-btn {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    transition: color 0.2s ease;
+}
+
+.arrow-up-icon {
+    font-size: 0.85rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-top-btn:hover {
+    color: #38bdf8;
+}
+
+.scroll-top-btn:hover .arrow-up-icon {
+    transform: translateY(-4px);
+}
+
+/* Tablet and Smartphone Layout Conversions */
+@media screen and (max-width: 768px) {
+    .footer-top-row,
+    .footer-bottom-row {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-tagline {
+        max-width: 280px;
+        margin: 8px auto 0 auto;
+    }
+    
+    .footer-container {
+        padding: 40px 20px 30px 20px;
+    }
+}

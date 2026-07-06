@@ -1,0 +1,93 @@
+<section id="contact" class="contact-section">
+    <div class="contact-grid-container">
+
+        <!-- Left Column: Quick Connect Information Panel -->
+        <div class="contact-info-panel">
+            <div class="contact-badge">
+                <span class="badge-dot"></span>
+                CONNECT
+            </div>
+
+            <h2 class="contact-main-heading">Let's Create Something <span class="text-highlight">Great</span></h2>
+
+            <p class="contact-intro-text">
+                I am open to discussing professional full-time engineering roles, consulting engagements, or backend
+                application architecture. Drop me a line!
+            </p>
+
+            <!-- Quick Communication Info Row Cards -->
+            <div class="info-links-stack">
+                <div class="info-link-card">
+                    <div class="icon-avatar bg-cyan"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <span>Email Me Directly</span>
+                        <a href="mailto:sohailq63w@gmail.com">sohailq63w@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="info-link-card">
+                    <div class="icon-avatar bg-green"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <span>Current Location</span>
+                        <p>Noida, Uttar Pradesh, India</p>
+                    </div>
+                </div>
+
+                <div class="info-link-card">
+                    <div class="icon-avatar bg-yellow"><i class="fab fa-linkedin"></i></div>
+                    <div>
+                        <span>Professional Network</span>
+                        <a href="https://www.linkedin.com/in/sohil-qureshi-327552245/" target="_blank">://linkedin.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Interactive Styled Input Message Box Form -->
+        <div class="contact-form-panel">
+            <!-- New Beautiful Section Header -->
+            <div class="form-header-area">
+                <h3 class="form-title">Send a Message</h3>
+                <p class="form-subtitle">Fill out the secure system packet form below to ping my server terminal.</p>
+            </div>
+
+            <form (ngSubmit)="sendMail()" class="modern-contact-form">
+                <div class="form-input-group">
+                    <i class="fas fa-user input-field-icon"></i>
+                    <input type="text" name="name" [(ngModel)]="form.name" placeholder="Your Name" required>
+                </div>
+
+                <div class="form-input-group">
+                    <i class="fas fa-envelope input-field-icon"></i>
+                    <input type="email" name="email" [(ngModel)]="form.email" placeholder="Your Email" required>
+                </div>
+
+                <div class="form-input-group">
+                    <i class="fas fa-phone-alt input-field-icon"></i>
+                    <input type="tel" name="phone" [(ngModel)]="form.phone" placeholder="Your Phone Number" required>
+                </div>
+
+                <div class="form-input-group">
+                    <i class="fas fa-pen input-field-icon"></i>
+                    <input type="text" name="subject" [(ngModel)]="form.subject" placeholder="Subject" required>
+                </div>
+
+                <div class="form-input-group align-textarea">
+                    <i class="fas fa-comment-alt input-field-icon textarea-icon"></i>
+                    <textarea name="message" [(ngModel)]="form.message" placeholder="Message" rows="5" required></textarea>
+                </div>
+
+                <!-- reCAPTCHA Container Wrapper for alignment alignment -->
+                <div class="captcha-wrapper">
+                    <re-captcha (resolved)="resolved($event)"></re-captcha>
+                </div>
+
+                <button type="submit" [disabled]="loading" class="form-submit-btn">
+                    <span>{{ loading ? 'Sending System Packet...' : 'Send Message' }}</span>
+                    @if(!loading){ <i class="fas fa-paper-plane btn-fly-icon"></i> }
+                </button>
+            </form>
+        </div>
+
+    </div>
+</section>

@@ -1,0 +1,68 @@
+<section id="projects" class="projects-section">
+
+    <!-- Glowing Section Header -->
+    <div class="projects-header-container">
+        <span class="projects-badge"><i class="fas fa-folder-open"></i> Portfolio</span>
+        <h2>Featured Projects</h2>
+        <p class="section-subtitle">Some of my recent work</p>
+    </div>
+
+    <!-- Active Navigation Pill Filter Bar Layout -->
+    <div class="filters">
+        @for(category of categories; track category){
+            <button
+                (click)="filter(category)"
+                [class.active]="selectedCategory === category"
+                class="filter-pill-btn">
+                {{category}}
+            </button>
+        }
+    </div>
+
+    <!-- Responsive Project Grid Layout Container -->
+    <div class="project-grid">
+        @for(project of filteredProjects; track project.title){
+            <div class="project-display-card">
+                
+                <div class="card-image-frame">
+                    <img [src]="project.image" [alt]="project.title" class="project-banner-img">
+                    <span class="category-tag-badge">{{project.category}}</span>
+                </div>
+
+                <div class="content">
+                    <h3 class="project-card-title">{{project.title}}</h3>
+                    <p class="project-card-desc">{{project.description}}</p>
+
+                    <!-- Tech Skill Badges Layout Frame -->
+                    <div class="chips">
+                        @for(tech of project.technologies; track tech){
+                            <span class="tech-chip-item">{{tech}}</span>
+                        }
+                    </div>
+
+                    <!-- Clean Formatted Action Buttons Row -->
+                    <div class="buttons">
+                        @if(project.github){
+                            <a [href]="project.github" target="_blank" class="action-btn btn-github">
+                                <i class="fab fa-github"></i> Code Base
+                            </a>
+                        }
+                        @if(project.demo){
+                            <a [href]="project.demo" target="_blank" class="action-btn btn-demo">
+                                <i class="fas fa-external-link-alt"></i> Live View
+                            </a>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        } @empty {
+            <!-- Dynamic Layout Fallback Row -->
+            <div class="empty-projects-state">
+                <i class="fas fa-code-branch empty-icon"></i>
+                <p>No projects loaded for this technology category yet.</p>
+            </div>
+        }
+    </div>
+
+</section>
