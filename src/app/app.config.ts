@@ -4,7 +4,6 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
 import { provideToastr } from 'ngx-toastr';
-import { RECAPTCHA_SETTINGS, RecaptchaSettings } from 'ng-recaptcha';
 import { ReCaptcha } from './core/constants/reCaptcha';
 
 export const appConfig: ApplicationConfig = {
@@ -18,11 +17,5 @@ export const appConfig: ApplicationConfig = {
       positionClass: 'toast-top-right',
       preventDuplicates: true,
     }),
-     {
-      provide: RECAPTCHA_SETTINGS,
-      useValue: {
-        siteKey: ReCaptcha.SITE_KEY,
-      } as RecaptchaSettings
-    }
   ]
 };

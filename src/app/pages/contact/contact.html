@@ -77,11 +77,6 @@
                     <textarea name="message" [(ngModel)]="form.message" placeholder="Message" rows="5" required></textarea>
                 </div>
 
-                <!-- reCAPTCHA Container Wrapper for alignment alignment -->
-                <div class="captcha-wrapper">
-                    <re-captcha (resolved)="resolved($event)"></re-captcha>
-                </div>
-
                 <button type="submit" [disabled]="loading" class="form-submit-btn">
                     <span>{{ loading ? 'Sending System Packet...' : 'Send Message' }}</span>
                     @if(!loading){ <i class="fas fa-paper-plane btn-fly-icon"></i> }

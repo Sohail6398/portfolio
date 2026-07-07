@@ -3,16 +3,16 @@ import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { EmailJsCredential } from '../../core/constants/EmailJSCredential';
 import { ToastrService } from 'ngx-toastr';
-import { RecaptchaModule } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-contact',
-  imports: [FormsModule,RecaptchaModule],
+  imports: [
+  FormsModule
+],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
 export class Contact {
-  captchaToken: string | null = null;
   constructor(private toastr: ToastrService) { }
 
   form = {
@@ -22,18 +22,10 @@ export class Contact {
     subject: '',
     message: ''
   };
-  resolved(token: string | null) {
-    this.captchaToken = token;
-  }
   loading = false;
 
   sendMail() {
     this.loading = true;
-    if (!this.captchaToken) {
-      this.toastr.error("Please verify the reCAPTCHA.", "Error");
-      this.loading = false;
-      return;
-    }
     // These keys must perfectly match the {{variable}} tags inside your EmailJS dashboard template!
     const templateParams = {
       from_name: this.form.name,
