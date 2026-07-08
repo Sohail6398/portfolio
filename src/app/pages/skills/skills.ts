@@ -15,7 +15,7 @@ skills: any = {};
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('/assets/data/skills.json').subscribe({
+    this.http.get('assets/data/skills.json').subscribe({
       next: (data) => {
         this.skills = data;
         this.skillCategories = Object.keys(data);
