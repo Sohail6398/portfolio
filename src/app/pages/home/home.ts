@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 export class Home {
   downloadResume(){
     const link  = document.createElement('a');
-    link.href = 'assets/resume/sohail-resume.pdf';
-    link.download = 'sohail-resume.pdf';
+    link.href = 'assets/resume/SohailResume-Portfolio.pdf';
+    link.download = 'SohailResume-Portfolio.pdf';
     link.click();
   }
 }
